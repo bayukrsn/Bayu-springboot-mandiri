@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                sh 'git clone --branch=master https://user:password@gitlab-saya.com/repo/project.git'
+                sh 'git clone --branch=master https://github.com/bayukrsn/Bayu-springboot-mandiri.git'
             }
         }
         stage('build') {

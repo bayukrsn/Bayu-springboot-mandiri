@@ -9,7 +9,7 @@ pipeline {
         stage('build') {
             steps {
                 sh  '''
-                    cd /home/bayu/bayu-springboot/bayu-example-spring-boot
+                    cd /var/lib/jenkins/workspaces/bayu-springboot-jenkins
                     docker build -t bayu-springboot:v3 .
                     '''
             }

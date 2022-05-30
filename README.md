@@ -4,7 +4,7 @@ Technical Assessment - Bayu Krisna Adi Winata
 
 CI/CD flow:
 
-![mandiri-flow drawio (1)](https://user-images.githubusercontent.com/96294690/170948939-d3b1bb84-775c-4197-b59e-7245ef106446.png)
+![mandiri-flow drawio (2)](https://user-images.githubusercontent.com/96294690/170949553-b0adae3b-6a33-45c9-bf5b-5d5432fbe251.png)
 
 docker image registry : https://hub.docker.com/r/bayukrsn/bayu-springboot/tags
 

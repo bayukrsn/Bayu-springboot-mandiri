@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bayu-springboot-ingress
+  namespace: development
+spec:
+  defaultBackend:
+    service:
+      name: bayu-springboot-service1
+      port:
+        number: 8080
+  rules:
+  - http:
+     paths:
+       - path: /bayu-springboot-service1
+         pathType: Prefix
+         backend:
+           service:
+             name: bayu-springboot-service1
+             port: 
+               number: 8080

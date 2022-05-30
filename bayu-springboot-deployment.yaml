@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bayu-springboot-dep1
+spec:
+  selector:
+    matchLabels:
+      app: bayu-springboot
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: bayu-springboot
+    spec:
+      containers:
+        - name: bayu-springboot
+          image: bayukrsn/bayu-springboot:v3
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: bayu-springboot-secret

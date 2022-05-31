@@ -16,7 +16,7 @@ pipeline {
         }
         stage('push to container registry') {
             steps {
-                sh "docker push bayukrsn/bayu-springboot:v3"
+                sh 'docker push bayukrsn/bayu-springboot:v3'
             }
         }
         stage('deploy app') {

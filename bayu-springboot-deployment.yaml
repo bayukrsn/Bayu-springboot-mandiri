@@ -24,7 +24,7 @@ spec:
             initialDelaySeconds: 0
             periodSeconds: 10
             timeoutSeconds: 5
-            successThreshold: 1
+            successThreshold: 3
             failureThreshold: 3
           readinessProbe:
             httpGet:
@@ -33,7 +33,7 @@ spec:
             initialDelaySeconds: 0
             periodSeconds: 10
             timeoutSeconds: 5
-            successThreshold: 1
+            successThreshold: 3
             failureThreshold: 3
           startupProbe:
             httpGet:
@@ -42,7 +42,7 @@ spec:
             initialDelaySeconds: 0
             periodSeconds: 10
             timeoutSeconds: 5
-            successThreshold: 1
+            successThreshold: 3
             failureThreshold: 3
       imagePullSecrets:
         - name: bayu-springboot-secret

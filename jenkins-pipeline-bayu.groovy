@@ -10,6 +10,7 @@ pipeline {
             steps {
                 sh  '''
                     cd /var/lib/jenkins/workspaces/bayu-springboot-jenkins
+                    mvn clean package
                     docker build -t bayu-springboot:v3 .
                     '''
             }

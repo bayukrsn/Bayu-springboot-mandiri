@@ -3,20 +3,21 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                sh 'git clone --branch=master https://user:password@gitlab-saya.com/repo/project.git'
+                sh 'git clone --branch=master https://github.com/bayukrsn/Bayu-springboot-mandiri.git'
             }
         }
         stage('build') {
             steps {
                 sh  '''
-                    cd /home/bayu/bayu-springboot/bayu-example-spring-boot
+                    cd /var/lib/jenkins/workspaces/bayu-springboot-jenkins
+                    mvn clean package
                     docker build -t bayu-springboot:v3 .
                     '''
             }
         }
         stage('push to container registry') {
             steps {
-                sh "docker push bayukrsn/bayu-springboot:v3"
+                sh 'docker push bayukrsn/bayu-springboot:v3'
             }
         }
         stage('deploy app') {

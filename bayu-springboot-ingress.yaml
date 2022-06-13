@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: bayu-springboot-ingress
   namespace: development
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   defaultBackend:
     service:
@@ -10,7 +12,8 @@ spec:
       port:
         number: 8080
   rules:
-  - http:
+  - host: "bayu-springboot.com"
+    http:
      paths:
        - path: /bayu-springboot-service1
          pathType: Prefix
